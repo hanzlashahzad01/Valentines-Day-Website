@@ -1,0 +1,108 @@
+/* About Section CSS */
+.collection-section {
+    position: relative;
+    padding: 6rem 1rem;
+    overflow: hidden;
+    text-align: center;
+}
+
+.collection-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #4A0404, #880E4F, #4A0404);
+    opacity: 0.9;
+    z-index: 0;
+}
+
+.collection-content {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.collection-header {
+    margin-bottom: 4rem;
+}
+
+.collection-subtitle {
+    color: #FFD700;
+    display: block;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    font-family: 'Cinzel', serif;
+}
+
+.collection-title {
+    font-size: 3.5rem;
+    font-family: 'Great Vibes', cursive;
+    color: white;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.collection-divider {
+    width: 100px;
+    height: 4px;
+    background: #FFD700;
+    margin: 1rem auto;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.collection-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.collection-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-icon {
+    background: rgba(136, 14, 79, 0.5);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.collection-card:hover .card-icon {
+    transform: scale(1.1);
+    background: rgba(136, 14, 79, 0.8);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-family: 'Cinzel', serif;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.card-desc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    line-height: 1.6;
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Reel Template - Animated</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Outfit:wght@400;600&display=swap');
+
+        body {
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .reel-container {
+            width: 380px;
+            /* roughly 9:16 mobile width */
+            height: 680px;
+            /* roughly 9:16 mobile height */
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            position: relative;
+            border-radius: 30px;
+            box-shadow: 0 0 50px rgba(255, 64, 129, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            text-align: center;
+            color: white;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Animated Hearts Background */
+        .bg-heart {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.2);
+            animation: floatUp 6s infinite linear;
+            z-index: 1;
+            font-size: 2rem;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(750px) scale(0.5) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.5;
+            }
+
+            80% {
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: translateY(-50px) scale(1.2) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Main Content Animation */
+        .content {
+            z-index: 10;
+            padding: 2rem;
+            backdrop-filter: blur(5px);
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            margin: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            opacity: 0;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease 0.5s forwards, scalePulse 3s ease-in-out infinite 2s;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: slideUp 0.8s ease 1s forwards;
+        }
+
+        .cta-btn {
+            background: white;
+            color: #e73c7e;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: modalPop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.5s forwards;
+            cursor: pointer;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-arrow {
+            display: inline-block;
+            animation: bounceRight 1s infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes modalPop {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes scalePulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounceRight {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(5px);
+            }
+        }
+
+        .logo {
+            position: absolute;
+            top: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.2s forwards;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            color: #FFEB3B;
+            /* Yellow for pop */
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reel-container">
+        <div class="logo">❤️ BrandName</div>
+
+        <!-- Generating Background Hearts via JS -->
+        <script>
+            const container = document.querySelector('.reel-container');
+            const emojis = ['❤️', '💖', '💘', '💝', '🌹'];
+
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('bg-heart');
+                heart.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                heart.style.animationDelay = (Math.random() * 5) + 's';
+                heart.style.fontSize = (Math.random() * 2 + 1.5) + 'rem';
+                container.appendChild(heart);
+            }
+        </script>
+
+        <div class="content">
+            <h1>Love is in<br>the <span class="highlight">Air</span></h1>
+            <p>Surprise your partner with our exclusive Valentine's collection.</p>
+            <a href="#" class="cta-btn">Shop Now <span class="cta-arrow">→</span></a>
+        </div>
+    </div>
+</body>
+
+</html>

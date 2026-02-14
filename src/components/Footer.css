@@ -1,0 +1,54 @@
+/* High Level Footer */
+.footer {
+    background: linear-gradient(to top, #1A0505, #4A0404);
+    color: #D32F2F;
+    padding: 6rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+    /* Gold Border */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.footer-brand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.footer-links {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.4s ease;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-link:hover {
+    color: #FFD700;
+    background: rgba(183, 28, 28, 0.4);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    border-color: #FFD700;
+}
+
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.4);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
