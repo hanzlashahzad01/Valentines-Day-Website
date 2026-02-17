@@ -97,7 +97,7 @@ Welcome to the **Ultimate Valentine's Day PR Concept** – a premium, high-conve
 
 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
 
-- **Email**: [hanzlashahzad01@gmail.com](mailto:hanzlashahzadhanzlashahzad@gmail.com)
+- **Email**: (mailto:hanzlashahzadhanzlashahzad@gmail.com)
 - **LinkedIn**: [Hanzla Shahzad](https://www.linkedin.com/in/hanzla-shahzad-5a82b22b6/)
 - **GitHub**: [@hanzlashahzad01](https://github.com/hanzlashahzad01)
 
