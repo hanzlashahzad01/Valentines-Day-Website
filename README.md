@@ -109,4 +109,4 @@ I'm always open to discussing new projects, creative ideas, or opportunities to 
   Made with ❤️ for Valentine's Day
 </p>
 
-Made by Hanzla Shahzad 💓🔥
+Made by Hanzla Shahzad
